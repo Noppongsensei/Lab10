@@ -9,16 +9,11 @@ int main (){
 	source.open("cheerbook.txt");
 	dest.open("cheerbook_copy.txt");
 	string textline;
-	int i=0;
-	cout<<"-------------------- BOOM ---------------------\n";
-	while(i<9){
-	getline(source,textline);
-	cout<<textline<<"\n";
-	i++;
-	}	
-	cout<<"-------------------- HA!! ---------------------";
-
-
+	dest <<"-------------------- BOOM ---------------------"<<'\n';
+	while(getline(source,textline)){
+		dest<<textline<<'\n';
+	}
+	dest <<"-------------------- HA!! ---------------------"<<'\n';
     source.close();
     dest.close();
 	return 0;
