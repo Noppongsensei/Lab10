@@ -15,11 +15,11 @@ int main()
         while (getline(source,textline))
         {
                 sum += atof(textline.c_str());
-                sum_of_square += sqrt(pow(atof(textline.c_str())-(sum/count),2));
+                sum_of_square += pow(atof(textline.c_str()),2);
                 count++;
         }
         cout << "Number of data = " << count << "\n";
         cout << setprecision(3);
         cout << "Mean = " << sum/count << "\n";
-        cout << "Standard deviation = " << sum_of_square;
+        cout << "Standard deviation = " << sqrt((1.0/count)*sum_of_square-pow((sum/count),2));
 }
